@@ -18,11 +18,6 @@
     background-color: #333;
     color: #fff;
   }
-  .header .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #fff;
-  }
   .header nav {
     display: flex;
     gap: 20px;
@@ -126,12 +121,18 @@
     display: inline-block;
     font-size: 16px;
   }
+  
+  /* Modificación para hacer el logo más pequeño */
+  .header .logo img {
+    max-width: 100px; /* Tamaño máximo del logo */
+    height: auto;
+  }
 </style>
 </head>
 <body>
 
 <div class="header">
-  <div class="logo">DISHRADAR</div>
+  <div class="logo"><a href="index.html"><img src="img/OIG1.jfif" alt="Logo"></a></div>
   <nav>
     <div class="dropdown">
       <div class="dropdown-btn">Categorías</div>
@@ -143,9 +144,9 @@
         <a href="#">Vegetariana</a>
       </div>
     </div>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-    <a href="#">Iniciar sesión</a>
+    <a href="#">Sobre Nosotros</a>
+    <a href="#">Contacto</a>
+    <a href="login.html">Iniciar sesión</a>
   </nav>
   <div class="search-container">
     <input type="search" placeholder="Buscar...">

@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+
 <title>Header with Modern Dropdown</title>
 <style>
   body {
@@ -126,17 +128,101 @@
     display: inline-block;
     font-size: 16px;
   }
-  .header .logo img {
-    max-width: 100px; /* Tamaño máximo del logo */
-    height: auto;
-  }
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
+body {
+  background: #456;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.login {
+  width: 400px;
+  margin: 16px auto;
+  font-size: 16px;
+}
+
+/* Reset top and bottom margins from certain elements */
+.login-header,
+.login p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* The triangle form is achieved by a CSS hack */
+.login-triangle {
+  width: 0;
+  margin-right: auto;
+  margin-left: auto;
+  border: 12px solid transparent;
+  border-bottom-color: #28d;
+}
+
+.login-header {
+  background: #28d;
+  padding: 20px;
+  font-size: 1.4em;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.login-container {
+  background: #ebebeb;
+  padding: 12px;
+}
+
+/* Every row inside .login-container is defined with p tags */
+.login p {
+  padding: 12px;
+}
+
+.login input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  padding: 16px;
+  outline: 0;
+  font-family: inherit;
+  font-size: 0.95em;
+}
+
+.login input[type="email"],
+.login input[type="password"] {
+  background: #fff;
+  border-color: #bbb;
+  color: #555;
+}
+
+/* Text fields' focus effect */
+.login input[type="email"]:focus,
+.login input[type="password"]:focus {
+  border-color: #888;
+}
+
+.login input[type="submit"] {
+  background: #28d;
+  border-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.login input[type="submit"]:hover {
+  background: #17c;
+}
+
+/* Buttons' focus effect */
+.login input[type="submit"]:focus {
+  border-color: #05a;
+}
 </style>
 </head>
 <body>
 
 <div class="header">
-  <div class="logo"><a href="index.html"><img src="img/OIG1.jfif" alt="Logo"></a></div>
+  <div class="logo">DISHRADAR</div>
   <nav>
     <div class="dropdown">
       <div class="dropdown-btn">Categorías</div>
@@ -157,6 +243,45 @@
     </button>
   </div>
 </div>
+
+
+
+<header class="site-header">
+  <nav class="site-nav"><input type="checkbox" id="menu-checkbox" /><label class="menu-icon" for="menu-checkbox"><i class="material-icons hamburger">menu</i><i class="material-icons close">close</i></label>
+
+  </nav>
+</header>
+<main class="site-content">
+  <div class="section hero">
+      <div class="mask"></div>
+      <div class="container hero-text">
+          <div class="brand">restaurante del andy</div>
+          <span class="primary">Lorem Ipsum</span>
+          <span class="secondary">Lorem ipsum, dolor sit amet </span></div>
+  </div>
+  <div class="section white restaurant" id="restaurant">
+      <div class="container">
+          <div class="about">
+              <h2>Lorem Ipsum</h2>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis nulla facilis ullam aspernatur expedita sapiente dicta. Animi dolorum voluptate alias? Officiis omnis tempora vitae at maiores odio quae impedit dolore.</p>
+          </div>
+          <div class="info">
+              <div class="info-block">
+                  <h3 class="info-title">Telefono</h3>
+                  <p class="info-body">65484125</p>
+              </div>
+              <div class="info-block">
+                  <h3 class="info-title">Localización</h3>
+                  <p class="info-body">Lleida, Lleida 25000</p>
+              </div>
+              <div class="info-block">
+                  <h3 class="info-title">Horario</h3>
+                  <p class="info-body">Abierto: 9:30 am - 10:00 pm (L-D)</p>
+              </div>
+          </div>
+      </div>
+  </div>
+  
 
 </body>
 </html>
