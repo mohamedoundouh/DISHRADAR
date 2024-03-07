@@ -319,8 +319,9 @@
 	 margin-top: 4rem;
 }
  .site-footer {
-	 background-color: #f9be40;
-	 color: #000;
+	 background-color: #333;
+	 color: #fff;
+
 	 text-align: center;
 	 padding: 2rem 6rem;
 }
