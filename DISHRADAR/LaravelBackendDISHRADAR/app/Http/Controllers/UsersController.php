@@ -43,27 +43,20 @@ class UsersController extends Controller
         return redirect()->route('verUsers')->with('successStore','User creado correctamente');
     }
 
-    /**
-     * Elimina un Pokémon específico.
-     */
+
     public function destroy(Request $request)
 
     {
-        //dd($request);
-        // Obtener el ID del Pokémon a eliminar desde la solicitud HTTP
+      
         $idSolicitado = $request->input('dniSolicitado');
 
         try {
-            // Buscar el Pokémon por su ID en la base de datos
             $user = User::findOrFail($idSolicitado);
 
-            // Eliminar el Pokémon
             $user->delete();
 
-            // Redirigir a la vista de Pokémon con un mensaje de éxito
             return redirect()->route('verUsers')->with('successDestroy', 'User eliminado correctamente');
         } catch (\Exception $e) {
-            // En caso de error, redirigir a la vista de Pokémon con un mensaje de error
             return redirect()->route('verUsers')->with('errorDestroy', 'Error al intentar eliminar el Pokémon');
         }
     }
