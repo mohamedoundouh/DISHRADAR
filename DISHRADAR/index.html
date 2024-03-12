@@ -3,127 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
-
+<link rel="stylesheet" href="header-footer.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
 <style>
-  body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f4f4f4;
-  }
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-  }
-  .header nav {
-    display: flex;
-    gap: 20px;
-  }
-  .header nav a, .header nav .dropdown-btn {
-    text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  .header nav a:hover, .header nav .dropdown-btn:hover {
-    background-color: #555;
-  }
-  .header .dropdown {
-    position: relative;
-  }
-  .header .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    min-width: 160px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    border-radius: 5px;
-    overflow: hidden;
-    z-index: 1;
-  }
-  .header .dropdown-content a {
-    color: #333;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    transition: background-color 0.3s ease;
-  }
-  .header .dropdown-content a:hover {
-    background-color: #f1f1f1;
-  }
-  .header .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  .header .search-container {
-    position: relative;
-  }
-  .header input[type="search"] {
-    padding: 8px 10px;
-    border: none;
-    border-radius: 20px;
-    outline: none;
-  }
-  .header .search-container button {
-    position: absolute;
-    right: 5px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #333;
-  }
-  .header input[type="search"]::placeholder {
-    color: #333;
-  }
+ 
 
-  .search-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
-  .search-container input[type="search"] {
-    padding: 10px 15px;
-    font-size: 16px;
-    border: 2px solid #ddd;
-    border-radius: 25px;
-    outline: none;
-    width: 250px;
-    transition: all 0.3s ease;
-  }
-  .search-container input[type="search"]:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
-  }
-  .search-container button {
-    position: absolute;
-    right: 5px;
-    border: none;
-    background: #007bff;
-    color: white;
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    text-align: center;
-    line-height: 32px;
-    cursor: pointer;
-    outline: none;
-  }
-  .search-container button:hover {
-    background: #0056b3;
-  }
-  .search-icon {
-    display: inline-block;
-    font-size: 16px;
-  }
 </style>
 </head>
 <body>
@@ -154,35 +39,39 @@
 <div class="main">
   <h1>MAIN PAGE</h1>
 </div>
+
 <footer class="site-footer">
   <div class="container">
-      <div class="footer-columns">
-          <div class="footer-column">
-              <h3>Servicio al Cliente</h3>
-              <ul>
-                  <li><a href="#">Contacto</a></li>
-                  <li><a href="#">Preguntas Frecuentes</a></li>
-                  <li><a href="#">Ayuda</a></li>
-              </ul>
-          </div>
-          <div class="footer-column">
-              <h3>Redes Sociales</h3>
-              <ul>
-                  <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
-                  <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
-                  <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
-                  <li><a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
-              </ul>
-          </div>
-          <div class="footer-column">
-              <h3>Sobre Nosotros</h3>
-              <ul>
-                  <li><a href="#">Acerca de Nosotros</a></li>
-                  <li><a href="#">Nuestro Equipo</a></li>
-              </ul>
-          </div>
+    <div class="footer-columns">
+      <div class="footer-column">
+        <h3>Servicio al Cliente</h3>
+        <ul>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Preguntas Frecuentes</a></li>
+          <li><a href="#">Ayuda</a></li>
+        </ul>
       </div>
+      <div class="footer-column">
+        <h3>Redes Sociales</h3>
+        <ul>
+          <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+          <li><a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Sobre Nosotros</h3>
+        <ul>
+          <li><a href="#">Acerca de Nosotros</a></li>
+          <li><a href="#">Nuestro Equipo</a></li>
+          <li><a href="politica.html">Politicas de Privacidad</a></li>
+
+        </ul>
+      </div>
+    </div>
   </div>
+  <p>&copy; 2024 DISHRADAR. Todos los derechos reservados.</p>
 </footer>
 </body>
 </html>

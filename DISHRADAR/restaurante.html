@@ -3,221 +3,314 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="header-footer.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
 
 <style>
-  body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f4f4f4;
-  }
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-  }
-  .header .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #fff;
-  }
-  .header nav {
-    display: flex;
-    gap: 20px;
-  }
-  .header nav a, .header nav .dropdown-btn {
-    text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  .header nav a:hover, .header nav .dropdown-btn:hover {
-    background-color: #555;
-  }
-  .header .dropdown {
-    position: relative;
-  }
-  .header .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    min-width: 160px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    border-radius: 5px;
-    overflow: hidden;
-    z-index: 1;
-  }
-  .header .dropdown-content a {
-    color: #333;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    transition: background-color 0.3s ease;
-  }
-  .header .dropdown-content a:hover {
-    background-color: #f1f1f1;
-  }
-  .header .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  .header .search-container {
-    position: relative;
-  }
-  .header input[type="search"] {
-    padding: 8px 10px;
-    border: none;
-    border-radius: 20px;
-    outline: none;
-  }
-  .header .search-container button {
-    position: absolute;
-    right: 5px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #333;
-  }
-  .header input[type="search"]::placeholder {
-    color: #333;
-  }
-
-  .search-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
-  .search-container input[type="search"] {
-    padding: 10px 15px;
-    font-size: 16px;
-    border: 2px solid #ddd;
-    border-radius: 25px;
-    outline: none;
-    width: 250px;
-    transition: all 0.3s ease;
-  }
-  .search-container input[type="search"]:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
-  }
-  .search-container button {
-    position: absolute;
-    right: 5px;
-    border: none;
-    background: #007bff;
-    color: white;
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    text-align: center;
-    line-height: 32px;
-    cursor: pointer;
-    outline: none;
-  }
-  .search-container button:hover {
-    background: #0056b3;
-  }
-  .search-icon {
-    display: inline-block;
-    font-size: 16px;
-  }
-  @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
-
-body {
-  background: #456;
-  font-family: 'Open Sans', sans-serif;
+  @import url("https://fonts.googleapis.com/css?family=Oxygen:300,400,700");
+ @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+ .button {
+	 padding: 1rem;
+	 border: 0.2rem solid transparent;
+	 transition: all ease 0.2s;
+}
+ .button.cta {
+	 background-color: #f9be40;
+	 color: #000;
+}
+ .button.cta:hover, .button.cta:focus {
+	 border-color: #cd8d06;
+}
+ .container {
+	 width: 100%;
+	 margin: 0 auto;
+}
+ @media screen and (min-width: 760px) {
+	 .container {
+		 width: 80%;
+	}
+}
+ @media screen and (min-width: 1080px) {
+	 .container {
+		 width: 60%;
+	}
+}
+ @media screen and (min-width: 1920px) {
+	 .container {
+		 width: 50%;
+	}
+}
+ .site-header a, .site-footer a, .site-header a:visited, .site-footer a:visited {
+	 color: #fff;
+}
+ .site-header {
+	 position: absolute;
+	 left: 0;
+	 width: 100%;
+	 height: 4rem;
+	 text-transform: uppercase;
+	 text-align: center;
+	 z-index: 10000;
+}
+ .site-nav {
+	 position: relative;
+}
+ #menu-checkbox {
+	 display: none;
+}
+ .menu-icon {
+	 color: #fff;
+	 position: absolute;
+	 z-index: 1000;
+	 left: 1rem;
+	 top: 1rem;
+	 width: 2.5rem;
+	 height: 2.5rem;
+	 border-radius: 4px;
+	 cursor: pointer;
+}
+ .menu-icon.sticky {
+	 position: fixed;
+	 color: #212226;
+	 background-color: #fff;
+	 border-radius: 50%;
+}
+ .menu-icon .material-icons {
+	 font-size: 2rem;
+	 display: none;
+	 line-height: 2.5rem;
+}
+ @media screen and (min-width: 760px) {
+	 .menu-icon {
+		 display: none;
+	}
+}
+ .site-nav-menu-item {
+	 padding: 1rem;
+	 opacity: 0.8;
+	 font-size: 1.2rem;
+}
+ .site-nav-menu-item:hover, .site-nav-menu-item:focus, .site-nav-menu-item.active {
+	 opacity: 1;
+}
+ .site-nav-menu-item.logo {
+	 display: none;
+}
+ @media screen and (min-width: 760px) {
+	 .site-header.sticky {
+		 position: fixed;
+		 top: 0;
+		 background-color: rgba(0, 0, 0, 0.9);
+	}
+	 .site-nav-menu-item {
+		 font-weight: 600;
+		 display: inline-block;
+		 vertical-align: middle;
+	}
+	 .site-nav-menu-item.logo {
+		 opacity: 1;
+		 display: inline-block;
+		 width: 4rem;
+	}
+}
+ @media screen and (max-width: 760px) {
+	 .site-nav {
+		 width: 100%;
+		 position: fixed;
+		 top: 0;
+	}
+	 .site-nav-menu {
+		 background-color: rgba(0, 0, 0, 0.9);
+		 height: 100vh;
+		 width: inherit;
+		 position: relative;
+	}
+	 .site-nav-menu-wrapper {
+		 position: absolute;
+		 top: 50%;
+		 left: 50%;
+		 transform: translate(-50%, -50%);
+	}
+	 .site-nav-menu-item {
+		 font-size: 2rem;
+	}
+	 #menu-checkbox:not(:checked) ~ .menu-icon .hamburger {
+		 display: block;
+	}
+	 #menu-checkbox:not(:checked) ~ .site-nav-menu {
+		 display: none;
+	}
+	 #menu-checkbox:checked ~ .menu-icon .close {
+		 display: block;
+	}
+	 #menu-checkbox:checked ~ .site-nav-menu {
+		 display: block;
+	}
+}
+ .hero {
+	 background-color: #7b2a3b;
+	 background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/299329/food-2689205_1920.jpg);
+	 background-size: cover;
+	 background-position: center;
+	 color: #fff;
+	 overflow: hidden;
+}
+ .hero-text {
+	 text-align: center;
+}
+ .hero-text .brand {
+	 font-size: 1.6rem;
+	 margin-top: 2rem;
+	 margin-bottom: 1rem;
+}
+ .hero-text .primary, .hero-text .secondary {
+	 display: inline-block;
+}
+ @media screen and (min-width: 550px) {
+	 .hero-text .brand {
+		 font-size: 3rem;
+		 margin-top: 3rem;
+		 margin-bottom: 3rem;
+	}
+	 .hero-text .primary, .hero-text .secondary {
+		 font-size: 1.2rem;
+	}
+}
+ @media screen and (min-width: 760px) {
+	 .hero-text .brand {
+		 margin-top: 4rem;
+		 margin-bottom: 3rem;
+		 font-size: 3.5rem;
+	}
+	 .hero-text .primary, .hero-text .secondary {
+		 display: block;
+	}
+	 .hero-text .primary {
+		 font-size: 1.5rem;
+	}
+	 .hero-text .secondary {
+		 font-size: 1.2rem;
+		 margin-top: 1rem;
+		 color: #f9be40;
+	}
+}
+ @media screen and (min-width: 1080px) {
+	 .hero-text .brand {
+		 font-size: 5rem;
+	}
+	 .hero-text .primary {
+		 font-size: 2rem;
+	}
+	 .hero-text .secondary {
+		 font-size: 1.5rem;
+	}
+}
+ @media screen and (min-width: 760px) {
+	 .restaurant {
+		 display: table;
+	}
+	 .restaurant .about, .restaurant .info {
+		 display: table-cell;
+		 vertical-align: top;
+	}
+	 .restaurant .about {
+		 padding-right: 4rem;
+		 width: 60%;
+	}
+}
+ .section {
+	 min-height: 400px;
+	 padding: 4rem;
+	 min-height: 50vh;
+}
+ .section.hero {
+	 min-height: 20vh;
+}
+ .section.white {
+	 background-color: #fff;
+}
+ .section.grey {
+	 background-color: #212226;
+	 color: #fff;
+}
+ .menu-list {
+	 display: flex;
+	 flex-wrap: wrap;
+}
+ .menu {
+	 margin-top: 4rem;
+	 position: relative;
+}
+ .menu:nth-child(2n+1) .menu-thumbnail {
+	 left: 0;
+}
+ .menu:nth-child(2n) .menu-thumbnail {
+	 right: 0;
+}
+ .menu-thumbnail {
+	 opacity: 0.3;
+	 position: absolute;
+	 width: 30vh;
+}
+ .menu-content {
+	 position: relative;
+}
+ .menu-item {
+	 width: 100%;
+	 display: flex;
+	 padding-top: 1rem;
+}
+ .menu-item > div {
+	 width: 50%;
+}
+ @media screen and (min-width: 760px) {
+	 .menu-item {
+		 width: 50%;
+	}
+	 .menu-item:not(:nth-child(2n + 1)) {
+		 padding-left: 3rem;
+	}
+}
+ @media screen and (min-width: 1920px) {
+	 .menu-item {
+		 width: 33.3333%;
+	}
+	 .menu-item:not(:nth-child(2n + 1)) {
+		 padding-left: 0;
+	}
+	 .menu-item:not(:nth-child(3n + 1)) {
+		 padding-left: 5rem;
+	}
+}
+ .item-price {
+	 text-align: right;
+}
+ .row {
+	 display: flex;
+	 flex-flow: wrap;
+	 flex-direction: row;
+	 align-items: center;
+	 width: 100%;
+}
+ .columns {
+	 width: 100%;
+}
+ @media screen and (min-width: 760px) {
+	 .columns:not(:first-child) {
+		 margin-left: 4%;
+	}
+	 .columns.six {
+		 width: 48%;
+	}
+}
+ .swimlane-image {
+	 max-height: 450px;
+}
+ .order-button {
+	 margin-top: 4rem;
 }
 
-.login {
-  width: 400px;
-  margin: 16px auto;
-  font-size: 16px;
-}
-
-/* Reset top and bottom margins from certain elements */
-.login-header,
-.login p {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-/* The triangle form is achieved by a CSS hack */
-.login-triangle {
-  width: 0;
-  margin-right: auto;
-  margin-left: auto;
-  border: 12px solid transparent;
-  border-bottom-color: #28d;
-}
-
-.login-header {
-  background: #28d;
-  padding: 20px;
-  font-size: 1.4em;
-  font-weight: normal;
-  text-align: center;
-  text-transform: uppercase;
-  color: #fff;
-}
-
-.login-container {
-  background: #ebebeb;
-  padding: 12px;
-}
-
-/* Every row inside .login-container is defined with p tags */
-.login p {
-  padding: 12px;
-}
-
-.login input {
-  box-sizing: border-box;
-  display: block;
-  width: 100%;
-  border-width: 1px;
-  border-style: solid;
-  padding: 16px;
-  outline: 0;
-  font-family: inherit;
-  font-size: 0.95em;
-}
-
-.login input[type="email"],
-.login input[type="password"] {
-  background: #fff;
-  border-color: #bbb;
-  color: #555;
-}
-
-/* Text fields' focus effect */
-.login input[type="email"]:focus,
-.login input[type="password"]:focus {
-  border-color: #888;
-}
-
-.login input[type="submit"] {
-  background: #28d;
-  border-color: transparent;
-  color: #fff;
-  cursor: pointer;
-}
-
-.login input[type="submit"]:hover {
-  background: #17c;
-}
-
-/* Buttons' focus effect */
-.login input[type="submit"]:focus {
-  border-color: #05a;
-}
 </style>
 </head>
 <body>
@@ -309,6 +402,8 @@ body {
                 <ul>
                     <li><a href="#">Acerca de Nosotros</a></li>
                     <li><a href="#">Nuestro Equipo</a></li>
+                    <li><a href="politica.html">Politicas de Privacidad</a></li>
+
                 </ul>
             </div>
         </div>
