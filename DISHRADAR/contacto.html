@@ -5,14 +5,67 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="header-footer.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-
+<title>Contacto</title>
 <style>
- 
+
+.container {
+  width: 80%;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.login {
+  width: 80%;
+  max-width: 500px; 
+  margin: 20px auto;
+  font-size: 16px;
+  height:100vh;
+}
+.login-header{
+    text-align: center;
+    margin-top: 50px;
+
+}
 
 </style>
 </head>
 <body>
 
+<div class="hero">
   <div class="header">
     <div class="logo">DISHRADAR</div>
     <nav>
@@ -33,11 +86,28 @@
     </nav>
     <div class="search-container">
       <input type="search" placeholder="Buscar...">
-      </button>
+      <button type="submit"><i class="fa fa-search"></i></button>
     </div>
+  </div>
 </div>
-<div class="main">
-  <h1>MAIN PAGE</h1>
+
+<div class="login">
+  <div class="login-header">
+    <h2>Contacto</h2>
+  </div>
+    <form action="#" method="POST">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Mensaje:</label>
+        <textarea id="message" name="message" required></textarea>
+        
+        <button type="submit">Enviar</button>
+      </form>
+
 </div>
 
 <footer class="site-footer">
@@ -73,5 +143,6 @@
   </div>
   <p>&copy; 2024 DISHRADAR. Todos los derechos reservados.</p>
 </footer>
+
 </body>
 </html>

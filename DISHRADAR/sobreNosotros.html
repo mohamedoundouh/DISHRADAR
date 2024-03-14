@@ -3,69 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="header-footer.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-<title>Sobre nosotros</title>
+
 <style>
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,400italic);
-
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f4f4f4;
-    margin: 0px;
-  }
-
- .product-navbar {
-	 height: 40px;
-	 width: 100%;
-	 background: #090b0f;
-	 border-bottom: 1px solid #090b0f;
-	 font-family: 'Open Sans', sans-serif;
-	 font-size: 14px;
-	 line-height: 1.42857143;
-	 color: #333;
-}
- .product-navbar .product-navbar-centered {
-	 max-width: 90vw;
-	 height: 20px;
-	 margin: 0 5vw;
-}
- .product-navbar .product-navbar-centered ul {
-	 margin: 0;
-	 padding: 0;
-}
- .product-navbar .product-navbar-centered ul li {
-	 float: left;
-	 list-style: none;
-	 margin-right: 30px;
-	 padding-top: 9px;
-}
- .product-navbar .product-navbar-centered ul li a {
-	 color: #6f7782;
-	 font-size: 12px;
-	 font-weight: 700;
-	 text-decoration: none;
-	 text-transform: uppercase;
-	 text-shadow: none !important;
-}
- .hero {
-	 background: #171b23;
-	 padding-left: 0;
-	 padding-right: 0;
-}
- .hero .container {
-	 margin: 0 5vw;
-	 padding: 0 0vw;
-	 max-width: 90vw;
-}
- .hero .navbar-brand {
+ 
+  .hero {
+	 background-color: #7b2a3b;
+	 background-image: url(img/como-escribir-web-sobre-nosotros.jpg);
+	 background-size: cover;
+	 background-position: center;
 	 color: #fff;
+	 overflow: hidden;
 }
- .hero .navbar-brand img {
-	 margin-right: 7px;
-	 margin-top: -7px;
-}
- #about-main {
+
+#about-main {
 	 font-family: 'Open Sans', sans-serif;
 	 margin: 0 auto;
 
@@ -78,9 +31,10 @@
 	 width: 100%;
 	 height: 530px;
 	 background: #171b23;
+   background-image: url(img/como-escribir-web-sobre-nosotros.jpg);
+   background-size: cover;
 	 position: relative;
 	 margin: 0;
-	 z-index: 3;
    border: 1px solid #171b23;
 	 border-radius: 0px;
    
@@ -100,7 +54,6 @@
 }
  #about-main .jumbotron .img-layer-container .team-image img {
 	 position: relative;
-	 z-index: 3;
 }
  #about-main .jumbotron .img-layer-container .circles-container {
 	 position: absolute;
@@ -111,11 +64,11 @@
 }
  #about-main .jumbotron .img-layer-container .circles-container .img-1 {
 	 position: absolute;
-	 z-index: 2;
+
 }
  #about-main .jumbotron .img-layer-container .circles-container .img-2 {
 	 position: absolute;
-	 z-index: 5;
+
 }
  #about-main .jumbotron .jumbotron-inner {
 	 max-width: 1350px;
@@ -138,14 +91,7 @@
 	 font-weight: bold;
 	 margin-bottom: 20px;
 }
- #about-main .jumbotron .jumbotron-inner .top-box .content-box p {
-	 text-align: center;
-	 color: #6f7782;
-	 font-size: 18px;
-	 font-weight: 500;
-	 margin: 0;
-	 margin-bottom: 15px;
-}
+
  @media (max-width: 1401px) {
 	 #about-main .jumbotron {
 		 height: 595px !important;
@@ -265,243 +211,128 @@
 	 color: #676a6c;
    
 }
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-  }
-  .header nav {
-    display: flex;
-    gap: 20px;
-  }
-  .header nav a, .header nav .dropdown-btn {
-    text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  .header nav a:hover, .header nav .dropdown-btn:hover {
-    background-color: #555;
-  }
-  .header .dropdown {
-    position: relative;
-  }
-  .header .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    min-width: 160px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    border-radius: 5px;
-    overflow: hidden;
-    z-index: 1;
-  }
-  .header .dropdown-content a {
-    color: #333;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    transition: background-color 0.3s ease;
-  }
-  .header .dropdown-content a:hover {
-    background-color: #f1f1f1;
-  }
-  .header .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  .header .search-container {
-    position: relative;
-  }
-  .header input[type="search"] {
-    padding: 8px 10px;
-    border: none;
-    border-radius: 20px;
-    outline: none;
-  }
-  .header .search-container button {
-    position: absolute;
-    right: 5px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #333;
-  }
-  .header input[type="search"]::placeholder {
-    color: #333;
-  }
 
-  .search-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
-  .search-container input[type="search"] {
-    padding: 10px 15px;
-    font-size: 16px;
-    border: 2px solid #ddd;
-    border-radius: 25px;
-    outline: none;
-    width: 250px;
-    transition: all 0.3s ease;
-  }
-  .search-container input[type="search"]:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
-  }
-  .search-container button {
-    position: absolute;
-    right: 5px;
-    border: none;
-    background: #007bff;
-    color: white;
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    text-align: center;
-    line-height: 32px;
-    cursor: pointer;
-    outline: none;
-  }
-  .search-container button:hover {
-    background: #0056b3;
-  }
-  .search-icon {
-    display: inline-block;
-    font-size: 16px;
-  }
-  
-  /* Modificación para hacer el logo más pequeño */
-  .header .logo img {
-    max-width: 100px; /* Tamaño máximo del logo */
-    height: auto;
-  }          
+.a img{
+  max-width: 100%;
+    height: auto; 
+    display: block; 
+    margin: 0 auto;
+
+}
+
 </style>
 </head>
 <body>
-    <div class="header">
-        <div class="logo">DISHRADAR</div>
-        <!--<div class="logo"><a href="index.html"><img src="img/OIG1.jfif" alt="Logo"></a></div>-->
-        <nav>
-          <a href="index.html">Inicio</a>
-          <div class="dropdown">
-            <div class="dropdown-btn">Categorías</div>
-            <div class="dropdown-content">
-              <a href="#">Italiana</a>
-              <a href="#">Mexicana</a>
-              <a href="#">China</a>
-              <a href="#">Japonesa</a>
-              <a href="#">Vegetariana</a>
-            </div>
-          </div>
-          <a href="sobreNosotros.html">Sobre Nosotros</a>
-          <a href="sobreNosotros.html">Contacto</a>
-          <a href="login.html">Iniciar sesión</a>
-        </nav>
-        <div class="search-container">
-          <input type="search" placeholder="Buscar...">
-          </button>
-        </div>
+
+<div class="header">
+  <div class="logo">DISHRADAR</div>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <div class="dropdown">
+      <div class="dropdown-btn">Categorías</div>
+      <div class="dropdown-content">
+        <a href="#">Italiana</a>
+        <a href="#">Mexicana</a>
+        <a href="#">China</a>
+        <a href="#">Japonesa</a>
+        <a href="#">Vegetariana</a>
       </div>
- 
-
-    <div id="about-main">
-        <div class="jumbotron">
-            <div class="jumbotron-inner">
-                <div class="top-box">
-                    <div class="content-box">
-                        <h1>
-                            Sobre Nosotros
-                        </h1>
-                    </div>
-                </div>
-            </div>
-            <div class="img-layer-container">
-                <div class="team-image" id="team-image">
-                    <img src="img/como-escribir-web-sobre-nosotros.jpg" />
-                </div>        
-            </div>
-        </div>
-        <div class="story-container">
-            <div class="need-for-dx-container">
-                <h3 class="text-center">
-                    Need for DX
-                </h3>
-                <p>
-                    Application Programming Interfaces (APIs) have taken the world by storm and are now the de facto standard of software communication. Almost every software product nowadays consumes APIs. The business model of numerous companies around the world relies upon the consumption of their APIs. API providers, therefore, strive to increase API adoption rates by spending millions of dollars every year to improve developer experience. This is usually done by providing Software Development Kits (SDKs) and API documentation to developer consuming their API(s). Developing SDKs and writing documentation, however, are arduous, monotonous and error-prone tasks. It is a slow process and costs a lot of time and money.
-                </p>
-                <div class="img-container">
-                    <img src="https://apimatic.io/img/theme/aboutUs/dxFlow.svg" alt="apimatic developer experience process" class="img-responsive"/>
-                </div>
-            </div>
-            <div class="container-divider"></div>
-            <div class="our-tech-container">
-                <h3 class="text-center">
-                    Our Technology
-                </h3>
-                <p>
-                    Our code generation engine enables API providers to generate SDKs for their APIs within minutes and at a fraction of the cost. We provide tools like our API editor and API transformer to further aid API providers in minimizing the time required to ship excellent quality SDKs to the developers using their APIs. Our code generation engine is also capable of generating succinct and error-free documentation for APIs and SDKs, both. The documentation for the SDKs includes dynamic screenshots detailing usage instructions tailored to the provider's specific API and also code snippets showing example usage. As the cherry on the cake, we provide beautifully designed DX portals to encapsulate this documentation.
-                </p>
-                <div class="img-container">
-                    <img src="https://apimatic.io/img/theme/cgaasIcons/cgaasProcess.gif" alt="apimatic code generation engine" class="img-responsive"/>
-                </div>
-            </div>
-            <div class="container-divider"></div>
-            <div class="origin-story-container">
-                <h3 class="text-center">
-                    Origin Story
-                </h3>
-                <p>
-                    While doing research work for their PhDs from the University of Auckland in 2014, our founders came across one of the API industry's pain points: SDKs. They realized that API providers who spent hundreds of thousands of dollars every year on improving developer experience, by providing SDKs and user-friendly documentation were able to reach a wider developer audience for their APIs compared to API providers who weren't able to do so.
-                </p>
-                <p>
-                    It was so clear that even though writing SDKs and documentation was a difficult and expensive task, it followed repeatable patterns which could be defined as logic blocks in a code generation engine. So, as a research project, they started working on a code generation engine which dynamically generated SDKs using API description as input.
-                </p>
-                <p>
-                    After a rigorous journey, this research project was selected as a candidate for commercialization by Return on Science (a NZ national research commercialization program focused on bringing new academic research to market) and the concept was transformed into a product i.e. APIMatic.
-                </p>
-            </div>
-            <div class="container-divider"></div>
-            <div class="today-container">
-                <h3 class="text-center">
-                    Flash Forward Today
-                </h3>
-                <p>
-                    APIMatic has come a long way since its inception 3 years ago. Having started with only generating SDKs, APIMatic now provides solutions in other areas of developer experience as well. Presently, APIMatic is used by numerous organizations around the world to:
-                </p>
-                <ul>
-                    <li>Create and store definitions of their APIs</li>
-                    <li>Generate SDKs for their APIs for 10 platforms</li>
-                    <li>Keep these SDKs in sync with API updates</li>
-                    <li>Convert API descriptions into multiple formats (Swagger, API Blueprint, RAML etc.)</li>
-                    <li>Generate beautiful documentation for their APIs and SDKs</li>
-                    <li>Generate complete Developer Experience API Portals</li>
-                </ul>
-            </div>
-            <div class="container-divider"></div>
-        </div>
     </div>
-    <script>
-        'use strict';
+    <a href="sobreNosotros.html">Sobre Nosotros</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="login.html">Iniciar sesión</a>
+  </nav>
+  <div class="search-container">
+    <input type="search" placeholder="Buscar...">
+    </button>
+  </div>
+</div>
 
-$(document).ready(function () {
-    $(window).bind('scroll', function (e) {
-        parallaxScroll();
-    });
-});
+</header>
+<div id="about-main">
+  <div class="jumbotron">
+      <div class="jumbotron-inner">
+          <div class="top-box">
+              <div class="content-box">
+                  <h1>
+                      Sobre Nosotros
+                  </h1>
+              </div>
+          </div>
+      </div>
+      <div class="img-layer-container">
+          <div class="team-image" id="team-image">
+          
+          </div>
 
-function parallaxScroll() {
-    const scrolled = $(window).scrollTop();
-    $('#team-image').css('top', (0 - (scrolled * .20)) + 'px');
-    $('.img-1').css('top', (0 - (scrolled * .35)) + 'px');
-    $('.img-2').css('top', (0 - (scrolled * .05)) + 'px');
-}
-    </script>  
+          <div class="circles-container">
+              <div class="img-1">
+                           
+              </div>
+              <div class="img-2">
+                                   
+              </div>                    
+          </div>           
+      </div>
+  </div>
+  <div class="story-container">
+      <div class="need-for-dx-container">
+          <h3 class="text-center">
+              Bienvenidos
+          </h3>
+          <p>
+            Bienvenido a DISHRADAR, tu destino gastronómico definitivo para descubrir y compartir experiencias culinarias en tu localidad. En DISHRADAR, creemos que la buena comida no solo alimenta el cuerpo, sino también el alma, y estamos aquí para ayudarte a encontrar los mejores sabores que tu ciudad tiene para ofrecer.          </p>
+          <div class="img-container">
+              <img src="img/OIG1.jfif"apimatic developer experience process" class="img-responsive"/>
+          </div>
+      </div>
+      <div class="container-divider"></div>
+      <div class="our-tech-container">
+          <h3 class="text-center">
+              Nuestro equipo
+          </h3>
+          <p>
+            Nuestro equipo está formado por apasionados gastrónomos y expertos en tecnología que trabajan incansablemente para mejorar tu experiencia en DISHRADAR. Desde la interfaz fácil de usar hasta las recomendaciones personalizadas, estamos comprometidos a brindarte una experiencia de usuario excepcional en cada visita.          </p>
+          <div class="a">
+              <img src="img/equipohumano.jpg" alt="apimatic code generation engine" class="img-responsive"/>
+          </div>
+      </div>
+      <div class="container-divider"></div>
+  </div>
+</div>  
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-columns">
+      <div class="footer-column">
+        <h3>Servicio al Cliente</h3>
+        <ul>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Preguntas Frecuentes</a></li>
+          <li><a href="#">Ayuda</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Redes Sociales</h3>
+        <ul>
+          <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+          <li><a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Sobre Nosotros</h3>
+        <ul>
+          <li><a href="#">Acerca de Nosotros</a></li>
+          <li><a href="#">Nuestro Equipo</a></li>
+          <li><a href="politica.html">Politicas de Privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <p>&copy; 2024 DISHRADAR. Todos los derechos reservados.</p>
+</footer>
+
 </body>
 </html>
