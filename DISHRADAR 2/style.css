@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 1080px;
+}
+
+/*NAVBAR*/
+
+* {
+    box-sizing: border-box;
+}
+
+li, a, button {
+    font-weight: 500;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navLinks li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.navLinks li a{
+    transition: all 0.3s ease 0;
+}
+
+.navLinks li a:hover{
+    color: green;
+}
+
+.cta {
+    padding: 15px 25px;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0;
+}
+
+.cta:hover {
+    background-color: green;
+}
+
+.logo:hover {
+    color: green;
+}
+
+.search {
+    --padding: 10px;
+
+    width: max-content;
+    align-items: center;
+    display: flex;
+    padding-right: var(--padding);
+    padding-left: var(--padding);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 50px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+}
+
+.search-input {
+    font-size: 16px;
+    color: grey;
+    margin-left: var(--padding);
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+.recovalo {
+
+
+    width: 700px;
+    height: 350px;
+    background-color: black;
+    border-radius: 500px 0 0 500px;
+}
+
+.heroe-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+.bajo-heroe {
+    padding-left: 210px;
+}
+
+.heroe-text {
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 15px;
+}
+
+.circulo {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 200px;
+    width: 320px;
+    height: 320px;
+    position: relative;
+    left: 20px;
+    top: 15px;
+}
