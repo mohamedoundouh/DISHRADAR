@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="header-footer.css">
 
 <style>
+
 .login {
   width: 400px;
   margin: 16px auto;
@@ -88,6 +89,10 @@
 .login input[type="submit"]:focus {
   border-color: #05a;
 }
+.header .logo img {
+    max-width: 100px; /* Tamaño máximo del logo */
+    height: auto;
+  }
 </style>
 </head>
 <body>
@@ -97,7 +102,7 @@
     <nav>
       <a href="index.html">Inicio</a>
       <div class="dropdown">
-        <div class="dropdown-btn">Categorías</div>
+        <div class="dropdown-btn" onclick="window.location.href='categoria.html';">Categorías</div>
         <div class="dropdown-content">
           <a href="#">Italiana</a>
           <a href="#">Mexicana</a>
@@ -116,5 +121,50 @@
     </div>
   </div>
 
+<div class="login">
+  <div class="login-triangle"></div>
+  
+  <h2 class="login-header">Regsitro</h2>
+
+  <form class="login-container">
+    <p><input type="text" placeholder="Nombre"></p>
+    <p><input type="date" placeholder="Fecha de nacimiento"></p>
+    <p><input type="email" placeholder="Email"></p>
+    <p><input type="password" placeholder="Password"></p>
+    <p><input type="submit" value="Registrar"></p>
+  </form>
+</div>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-columns">
+      <div class="footer-column">
+        <h3>Servicio al Cliente</h3>
+        <ul>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Preguntas Frecuentes</a></li>
+          <li><a href="#">Ayuda</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Redes Sociales</h3>
+        <ul>
+          <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+          <li><a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Sobre Nosotros</h3>
+        <ul>
+          <li><a href="#">Acerca de Nosotros</a></li>
+          <li><a href="#">Nuestro Equipo</a></li>
+          <li><a href="politica.html">Politicas de Privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <p>&copy; 2024 DISHRADAR. Todos los derechos reservados.</p>
+</footer>
 </body>
 </html>
